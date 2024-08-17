@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+
+@layer base {
+
+    .barlow {
+        font-family: var(--font-barlow)
+    }
+
+    body {
+        @apply text-base;
+        @apply font-medium;
+        @apply text-logo;
+
+
+
+    }
+
+    h1 {
+        @apply text-4xl;
+        @apply font-semibold;
+    }
+
+    h2 {
+        @apply text-xl;
+    }
+
+    h5 {
+        @apply text-xs;
+        @apply font-light;
+    }
+
+    a {
+        @apply text-blue-700;
+    }
+
+    a:hover {
+        @apply text-neutral-900
+    }
+}
