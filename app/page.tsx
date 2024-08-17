@@ -7,6 +7,7 @@ import { HOME_QUERYResult } from '@/sanity.types';
 import Footer from "./components/footer";
 import logo from "@/public/logo.svg"
 
+
 export default async function Home() {
   const home = await client.fetch<HOME_QUERYResult>(HOME_QUERY)
   return (
@@ -21,22 +22,21 @@ export default async function Home() {
             fill
             style={{ objectFit: 'cover' }}
           />
-          <div className='absolute w-2/3 lg:w-1/3 flex flex-col gap-10 items-center left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10'>
+          <div className='w-full px-5 absolute flex gap-5 flex-col items-center left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2'>
             <Image
               priority
               src={logo}
               alt="Follow us on Twitter"
-              className="w-full"
+              className="w-2/3 md:w-1/3 lg:w-1/5"
 
             />
-            <div className='text-cemter'>
+            <div className='text-center'>
               <PortableText value={home.comingSoon} />
             </div>
 
-            <div className=''>
+            <div className='md:w-1/2 lg:w-1/2'>
               <PortableText value={home.text} />
             </div>
-
           </div>
         </div>
 

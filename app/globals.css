@@ -36,10 +36,10 @@
     }
 
     a {
-        @apply text-blue-700;
+        @apply text-lime-950;
     }
 
     a:hover {
-        @apply text-neutral-900
+        @apply text-logo
     }
 }

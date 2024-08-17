@@ -129,6 +129,9 @@ export type Home = {
     _type: "block";
     _key: string;
   }>;
+  adresse?: string;
+  telefonnummer?: string;
+  email?: string;
 };
 
 export type SanityImageCrop = {
@@ -241,7 +244,7 @@ export type FOOTER_QUERYResult = Array<{
   }> | any;
 }>;
 // Variable: HOME_QUERY
-// Query: *[_type == "home"]{_id, name, comingSoon, text, bild, alt}
+// Query: *[_type == "home"]{_id, name, comingSoon, text, bild, alt, adresse, telefonnummer, email}
 export type HOME_QUERYResult = Array<{
   _id: string;
   name: string | any;
@@ -294,5 +297,8 @@ export type HOME_QUERYResult = Array<{
     _type: "image";
   } | any;
   alt: any;
+  adresse: string | any;
+  telefonnummer: string | any;
+  email: string | any;
 }>;
 

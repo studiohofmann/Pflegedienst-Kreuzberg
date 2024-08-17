@@ -41,6 +41,21 @@ const home = {
             type: "array",
             of: [{ type: "block" }],
         }),
+        defineField({
+            name: "adresse",
+            title: "Adresse",
+            type: "string",
+        }),
+        defineField({
+            name: "telefonnummer",
+            title: "Telefonnummer",
+            type: "string",
+        }),
+        defineField({
+            name: "email",
+            title: "Email",
+            type: "string",
+        }),
     ],
 };
 
