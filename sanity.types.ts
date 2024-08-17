@@ -238,13 +238,13 @@ export type FOOTER_QUERYResult = Array<{
     level?: number;
     _type: "block";
     _key: string;
-  }> | null;
+  }> | any;
 }>;
 // Variable: HOME_QUERY
 // Query: *[_type == "home"]{_id, name, comingSoon, text, bild, alt}
 export type HOME_QUERYResult = Array<{
   _id: string;
-  name: string | null;
+  name: string | any;
   comingSoon: Array<{
     children?: Array<{
       marks?: Array<string>;
@@ -262,7 +262,7 @@ export type HOME_QUERYResult = Array<{
     level?: number;
     _type: "block";
     _key: string;
-  }> | null;
+  }> | any;
   text: Array<{
     children?: Array<{
       marks?: Array<string>;
@@ -280,7 +280,7 @@ export type HOME_QUERYResult = Array<{
     level?: number;
     _type: "block";
     _key: string;
-  }> | null;
+  }> | any;
   bild: {
     asset?: {
       _ref: string;
@@ -292,7 +292,7 @@ export type HOME_QUERYResult = Array<{
     crop?: SanityImageCrop;
     alt?: string;
     _type: "image";
-  } | null;
-  alt: null;
+  } | any;
+  alt: any;
 }>;
 
