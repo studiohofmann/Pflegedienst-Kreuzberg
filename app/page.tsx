@@ -4,6 +4,8 @@ import { urlFor } from '@/sanity/lib/image'
 import { PortableText } from 'next-sanity'
 import { HOME_QUERY } from '@/sanity/lib/queries'
 import { HOME_QUERYResult } from '@/sanity.types';
+import { FOOTER_QUERY } from '@/sanity/lib/queries'
+import { FOOTER_QUERYResult } from '@/sanity.types'
 import Footer from "./components/footer";
 import logo from "@/public/logo.svg"
 import Link from 'next/link';
@@ -13,6 +15,7 @@ import { MailFilled } from '@ant-design/icons';
 
 
 export default async function Home() {
+  const footer = await client.fetch<FOOTER_QUERYResult>(FOOTER_QUERY)
   const home = await client.fetch<HOME_QUERYResult>(HOME_QUERY)
   return (
 
@@ -26,7 +29,7 @@ export default async function Home() {
             fill
             style={{ objectFit: 'cover' }}
           />
-          <div className='w-full px-5 absolute flex gap-5 flex-col items-center left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2'>
+          <div className='w-full h-full px-5 pt-10 pb-3 absolute flex justify-between flex-col items-center left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2'>
             <Image
               priority
               src={logo}
@@ -41,7 +44,7 @@ export default async function Home() {
             <div className='md:w-1/2 lg:w-1/2'>
               <PortableText value={home.text} />
             </div>
-            <h5 className="flex flex-col pt-5">
+            <h5 className="flex flex-col gap-2">
               <Link href="https://maps.app.goo.gl/Nb5ogG4z6pRRDj248">
                 <HomeFilled className="text-sm mr-2" />
                 {home.adresse}
@@ -59,16 +62,19 @@ export default async function Home() {
 
               </Link>
             </h5>
+            <h5>
+              {(new Date().getFullYear())}&nbsp;©&nbsp;{home.name}
+              {
+                footer.map((footer) => (
+                  <div key={footer._id} >
+                    <PortableText value={footer.designDevelopment} />
+                  </div>
+                ))}
+            </h5>
           </div>
         </div>
 
       ))}
-
-      <div className="absolute text-center bottom-0 pb-2">
-        <Footer />
-      </div>
-
-
     </main>
 
   );
