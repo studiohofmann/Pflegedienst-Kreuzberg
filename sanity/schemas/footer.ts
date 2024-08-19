@@ -10,6 +10,12 @@ const footer = {
 
     fields: [
         defineField({
+            name: "copyright",
+            title: "Copyright",
+            type: "string",
+
+        }),
+        defineField({
             name: "designDevelopment",
             title: "Design & Development",
             type: "array",

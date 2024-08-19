@@ -16,14 +16,11 @@
         @apply text-base;
         @apply font-medium;
         @apply text-logo;
-
-
-
     }
 
     h1 {
-        @apply text-2xl;
-        @apply font-semibold;
+        @apply text-lg;
+        @apply font-bold
     }
 
     h2 {
@@ -36,7 +33,7 @@
     }
 
     a {
-        @apply text-lime-950;
+        @apply text-lime-900;
     }
 
     a:hover {
