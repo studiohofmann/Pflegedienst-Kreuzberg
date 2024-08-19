@@ -19,7 +19,7 @@ export default async function Home() {
   return (
 
     home.map((home) => (
-      <div key={home._id} className="bg-red-200 h-screen flex flex-col items-center justify-center gap-5 md:gap-10 px-5 md:px-20 lg:px-40">
+      <div key={home._id} className="h-screen flex flex-col items-center justify-center gap-5 md:gap-10 px-5 md:px-20 lg:px-40">
 
         <Image
           src={urlFor(home.bild).url()}
