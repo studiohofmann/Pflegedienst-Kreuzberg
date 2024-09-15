@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Barlow } from 'next/font/google'
-import "./globals.css";
-import Footer from "./components/footer";
-import Logo from "./components/logo";
+import "../../app/globals.css";
+import Footer from "../components/footer";
+import Logo from "../components/logo";
 
 const barlow = Barlow({
   weight: ['400', '500', '600', '700'],
@@ -12,7 +12,7 @@ const barlow = Barlow({
 
 
 export const metadata: Metadata = {
-  title: "der Pflegedienst für Kreuzberg",
+  title: "Der Pflegedienst für Kreuzberg",
   description: "Der Pflegedienst für Kreuzberg - Nachhaltig, nah und aus Überzeugung.",
   icons: {
     icon: '/favicon.png',

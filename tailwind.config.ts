@@ -12,7 +12,8 @@ const config: Config = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
-        'logo': '#00387b',
+        'logo': '#0054a6',
+        'link': '#0080ff'
 
       },
       backgroundImage: {

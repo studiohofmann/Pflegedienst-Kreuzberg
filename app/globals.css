@@ -33,7 +33,7 @@
     }
 
     a {
-        @apply text-lime-900;
+        @apply text-link;
     }
 
     a:hover {
