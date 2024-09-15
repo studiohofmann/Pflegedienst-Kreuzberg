@@ -40,7 +40,7 @@ export default async function Home() {
 
 
         <h5 className="flex flex-col items-center z-10">
-          <Link href="https://maps.app.goo.gl/Nb5ogG4z6pRRDj248" className="flex gap-1"><HomeFilled />{home.adresse}</Link>
+          <Link href="https://maps.app.goo.gl/MmBemaXvREc7BAsHA" target="_blank" className="flex gap-1"><HomeFilled />{home.adresse}</Link>
           <Link href="tel:+493062871764" className="flex gap-1"><PhoneFilled className="" />{home.telefonnummer}</Link>
           <Link href="mailto:info@pflegedienstkreuzberg.de" className="flex gap-1"><MailFilled className="" />{home.email}</Link>
         </h5>
